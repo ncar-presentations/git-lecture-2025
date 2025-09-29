@@ -93,7 +93,7 @@ https://github.com/git/git/blob/e83c5163316f89bfbde7d9ab23ca2e25604af290/README
 
    <div class="box-no-border" style="width: 40%;" markdown="1" data-marpit-fragment markdown>
 
-    The **commit** is the unit of change
+    The **commit** is a snapshot of the project at a specific point in time.
 
    </div>
 
@@ -518,11 +518,11 @@ You'll need to commit the change if you want to keep it.
 
 ---
 
-![drop-shadow](multiple-remotes.svg)
+![bg contain drop-shadow](multiple-remotes.svg)
 
 ---
 
-![drop-shadow](pull-request.svg)
+![bg contain drop-shadow](pull-request.svg)
 
 ---
 <!-- footer: "" -->
@@ -532,7 +532,7 @@ You'll need to commit the change if you want to keep it.
 
 <div data-marpit-fragment markdown="1">
 
-**Cloning** is the initial download of remote repository to your machine.
+**Cloning** is the initial download of a remote repository to your machine.
 
  `git clone repository-address` downloads the code to your machine.  You can use git locally, but if you want to push your changes to GitHub you will need permission to write to the repository on github.
 
@@ -546,7 +546,7 @@ Multiple people can work on the same repository if they have **permission to wri
 
 <div data-marpit-fragment>
 
-_Forking_ is creating your own version of the code on GitHub.  You can now change the code and push those commits to GitHub.
+_Forking_ is creating _your own copy_ of the repository on GitHub.  You can now change the code and push those commits to GitHub, without affecting the original repository.
 You make a _pull request_ to suggest your changes be merged into the original repository.
 
 ---
@@ -656,22 +656,23 @@ Here is an example message when pulling changes conflicts with your local change
 ![](divergent.png)
 
 ---
-
+<!-- _footer: "https://jvns.ca/blog/2023/11/23/branches-intuition-reality/" -->
 # Pulling changes when there is divergence
 
 Merge → keep both histories, make a merge commit.
 
 Rebase → replay your local commits on top of the remote branch, so history looks linear.
 
-Fast-forward only → only allow pulls if no divergence exists (your branch can be simply moved forward).
+Fast-forward only → only allow pulls if no divergence exists so Git can just move the branch pointer forward.
 
 <div class="note" data-marpit-fragment markdown="1">
-Can set your preference globally or give the preference on the command line for a single pull.
+You can set your preference globally or give the preference on the command line for a single pull.
 
 `git pull --no-rebase`
 
 
 </div>
+
 
 ---
 
@@ -726,7 +727,7 @@ The same concepts (merge, rebase) apply when you are merging branches.
 </div>
 
 ---
-
+<!-- _footer: "https://www.atlassian.com/git/tutorials/using-branches/git-merge" -->
 # Merging branches
 
 A common workflow is to create a feature branch to work on a new feature, and then once the feature is finished, merge the changes back into the main branch.
@@ -786,7 +787,7 @@ Fork the [CROCODILE-CESM/git-lecture-2025](https://github.com/CROCODILE-CESM/git
 
 Clone your forked repository to your machine.
 
-`git clone https://github.com/YOUR_USERNAME/git-lecture-2025.git`
+`git clone https://github.com/USERNAME/git-lecture-2025.git`
 
 Create a new branch for your changes.
 
@@ -807,10 +808,15 @@ Replace **USERNAME** with your GitHub username
 
 Make a **change** to the code
 
-- Add your name to the participants.md file in the repository.
-- Fix any typos in lecture.md
+Take a look at the changes you have made with
+`git diff`
 
-Add and **commit** your changes.
+**Add** and **commit** your changes.
+`git add participants.md`
+`git commit -m "Add my name to participants.md"`
+
+*Push* your changes to your forked repository on GitHub.
+`git push origin participant-USERNAME` where participant-USERNAME is the name of your branch.
 
 ---
 
@@ -820,6 +826,7 @@ Submit a pull request to the [CROCODILE-CESM/git-lecture-2025](https://github.co
 
 - Add your name to the participants.md file in the repository.
 - Fix any typos in lecture.md
+- Add a link to a great Git resource to the README.md
 
 </div>
 
