@@ -9,11 +9,11 @@ Presented as part of the 2025 [CROCODILE](https://www.cesm.ucar.edu/events/regio
 ### Exercises
 - [Exercise 1: create a repository](https://crocodile-cesm.github.io/git-lecture-2025/#24)
 - [Exercise 2: Clone a repository from GitHub](https://crocodile-cesm.github.io/git-lecture-2025/#47)
-- [Exercise 3: Make a pull request](https://crocodile-cesm.github.io/git-lecture-2025/#64)
+- [Exercise 3: Make a pull request](https://crocodile-cesm.github.io/git-lecture-2025/#66)
 
 ## Homework
-- [Putting your repository on Github](https://crocodile-cesm.github.io/git-lecture-2025/#67)
-- [Think about the workflow you want to use](https://crocodile-cesm.github.io/git-lecture-2025/#69)
+- [Putting your repository on Github](https://crocodile-cesm.github.io/git-lecture-2025/#69)
+- [Think about the workflow you want to use](https://crocodile-cesm.github.io/git-lecture-2025/#70)
 
 
 

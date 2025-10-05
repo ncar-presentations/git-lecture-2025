@@ -607,6 +607,48 @@ What is the difference between a **commit** and a _branch_?
 </div>
 
 ---
+
+<div class="box-container">
+   <div class="box-no-border" style="width: 60%;" markdown="1">
+
+Create a branch 
+
+`git checkout -b my-branch`
+
+<div data-marpit-fragment markdown markdown="1">
+Black is main, <span style="color: red;">Red is my-branch.</span>
+
+Having different branches allows you to work on **new features** without affecting the main branch until you are ready to merge your changes back into main.
+
+</div>
+   </div>
+
+   <div class="box-no-border" style="width: 20%;" markdown="1" data-marpit-fragment markdown>
+
+   ![](branch.png)
+
+   </div>
+
+</div>
+
+<div class="note" data-marpit-fragment markdown="1">
+
+`git branch` : lists all branches   
+`git branch -a` : includes remote branches
+
+The `*` shows which branch you are currently on.
+
+</div>
+
+---
+
+So, we have clones, forks and branches
+
+* Clone - a copy of a repository on your machine so you can work on it locally and commit changes.
+* Branch - creates a separate line of development within a repository
+* Fork - a copy of the repository on GitHub that you can edit without affecting the original.
+
+---
 <!-- footer: "" -->
 
 # Working with remote repositories
@@ -806,6 +848,7 @@ Replace **USERNAME** with your GitHub username
 
 ### Make things <span style="color:rgb(255, 123, 0)">better</span>!
 
+Make an *issue* for a problem you find, or a *suggestion* for improvement.
 Make a **change** to the code
 
 Take a look at the changes you have made with
@@ -815,7 +858,7 @@ Take a look at the changes you have made with
 `git add participants.md`
 `git commit -m "Add my name to participants.md"`
 
-*Push* your changes to your forked repository on GitHub.
+**Push** your changes to your forked repository on GitHub.
 `git push origin participant-USERNAME` where participant-USERNAME is the name of your branch.
 
 ---
