@@ -22,3 +22,7 @@ Presented as part of the 2025 [CROCODILE](https://www.cesm.ucar.edu/events/regio
 - [Git cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 - [Atlassian Git tutorials](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
   Note uses Bitbucket rather than GitHub, but the Git commands are the same.
+
+## Colloborative code resources
+
+- [code-review.org](https://code-review.org/)
