@@ -1,7 +1,8 @@
 # Git & GitHub 
 
 Welcome! This repo contains lecture slides for learning Git and GitHub.
-Presented as part of the 2025 [CROCODILE](https://www.cesm.ucar.edu/events/regional-ocean-modeling-mom6-community-earth-system-model-framework) workshop. 
+Presented as part of the 2025 [Workshop on Correctness and Reproducibility for Earth System Software](https://ncar.github.io/correctness-workshop/)
+Tutorial: Rigor and Reasoning in Research Software
 
 ## 📊 Slides
 - [View online (GitHub Pages)](https://crocodile-cesm.github.io/git-lecture-2025/)
@@ -23,6 +24,6 @@ Presented as part of the 2025 [CROCODILE](https://www.cesm.ucar.edu/events/regio
 - [Atlassian Git tutorials](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
   Note uses Bitbucket rather than GitHub, but the Git commands are the same.
 
-## Colloborative code resources
+## Collaborative code resources
 
 - [code-review.org](https://code-review.org/)
