@@ -5,16 +5,16 @@ Presented as part of the 2025 [Workshop on Correctness and Reproducibility for E
 Tutorial: Rigor and Reasoning in Research Software
 
 ## 📊 Slides
-- [View online (GitHub Pages)](https://crocodile-cesm.github.io/git-lecture-2025/)
+- [View online (GitHub Pages)](https://ncar-presentations.github.io/git-lecture-2025/)
 
 ### Exercises
-- [Exercise 1: create a repository](https://crocodile-cesm.github.io/git-lecture-2025/#24)
-- [Exercise 2: Clone a repository from GitHub](https://crocodile-cesm.github.io/git-lecture-2025/#47)
-- [Exercise 3: Make a pull request](https://crocodile-cesm.github.io/git-lecture-2025/#66)
+- [Exercise 1: create a repository](https://ncar-presentations.github.io/git-lecture-2025/#24)
+- [Exercise 2: Clone a repository from GitHub](https://ncar-presentations.github.io/git-lecture-2025/#47)
+- [Exercise 3: Make a pull request](https://ncar-presentations.github.io/git-lecture-2025/#66)
 
 ## Homework
-- [Putting your repository on Github](https://crocodile-cesm.github.io/git-lecture-2025/#69)
-- [Think about the workflow you want to use](https://crocodile-cesm.github.io/git-lecture-2025/#70)
+- [Putting your repository on Github](https://ncar-presentations.github.io/git-lecture-2025/#69)
+- [Think about the workflow you want to use](https://ncar-presentations.github.io/git-lecture-2025/#70)
 
 
 

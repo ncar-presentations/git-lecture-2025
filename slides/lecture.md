@@ -20,7 +20,8 @@ cat lecture.md participants.md > full.md; npx @marp-team/marp-cli@latest full.md
 <!-- This is a speaker note for the first page -->
 
 👩‍🏫 Helen Kershaw
-📅 Crocodile Workshop October 2025
+📅 2nd Workshop on Correctness and Reproducibility for Earth System Software 2025
+📚 Tutorial: Rigor and Reasoning in Research Software
 
 ---
 # Why should I care about version control?
@@ -28,6 +29,7 @@ cat lecture.md participants.md > full.md; npx @marp-team/marp-cli@latest full.md
 * You can recover previous versions of your project
 * Multiple people can work on the same project 
 * You can tag a version of code that was used with a particular paper
+* Test versions of the code
 * Using version control is a great skill to have as you develop code, scripts, and figures 
 *  *Anything* that you edit can benefit from version control
 
@@ -44,9 +46,11 @@ The Linux Foundation
 # Goals
 
 - Understand Git basics
-- Learn about GitHub workflows  
-- Practice branching, merging, and pull requests  
-  * And creating and fixing *conflicts*
+- Learn about collaboration on GitHub
+  - branching, merging, and pull requests  
+  - creating and fixing *conflicts*
+- Learn about GitHub Actions for automated testing
+
 
 ---
 
@@ -102,6 +106,22 @@ https://github.com/git/git/blob/e83c5163316f89bfbde7d9ab23ca2e25604af290/README
 ---
 
 [![Commit](commit.png)](https://github.com/ESCOMP/CESM/commit/9b909ecb9831c450365a0d79f32968e76466a713)
+
+
+---
+
+# Git concepts
+
+A **commit** is way to communicate change
+
+Traceability - You can tie test results to a specific version of the code. If tests start failing, you know which commit introduced the failure.
+
+Reproducibility - re-run tests on exactly the same code. 
+
+
+<div class="note" data-marpit-fragment markdown="1">
+Massive assumption here is that your commits are atomic
+</div>
 
 ---
 
@@ -528,7 +548,7 @@ You'll need to commit the change if you want to keep it.
 <!-- footer: "" -->
 # Working with remote repositories
 
-**Fork** vs. _Clone_
+_Fork_ vs. **Clone**
 
 <div data-marpit-fragment markdown="1">
 
@@ -575,6 +595,7 @@ https://github.com/mom-ocean/MOM6
 <!-- _footer: https://ossinsight.io/analyze/mom-ocean/MOM6#people -->
 
 ![bg contain](mom6-insights.png)
+
 
 ---
 <!-- footer: Exercise 2 -->
@@ -642,6 +663,10 @@ The `*` shows which branch you are currently on.
 
 ---
 
+![bg contain](rebase-merge-squash.svg)
+
+---
+
 So, we have clones, forks and branches
 
 * Clone - a copy of a repository on your machine so you can work on it locally and commit changes.
@@ -649,6 +674,7 @@ So, we have clones, forks and branches
 * Fork - a copy of the repository on GitHub that you can edit without affecting the original.
 
 ---
+
 <!-- footer: "" -->
 
 # Working with remote repositories
@@ -669,7 +695,142 @@ To get changes from the remote repository and apply them to your branch
 
 </div>
 
+
 ---
+
+# Open source 
+
+Get involved!
+
+- Issue creators
+- Code reviewers
+- Pull request authors
+- **Test writers!**
+- Star gazers
+
+---
+<!-- _footer: https://ossinsight.io/analyze/NCAR/DART#people -->
+
+![bg contain](dart-pulls.png)
+
+
+---
+
+![bg contain](pull-request.svg)
+
+---
+
+![bg contain](Contributors.svg)
+
+---
+
+![bg contain](Contributors-red.svg)
+
+
+---
+
+# Working with remote repositories means *working with other people's code*
+
+---
+
+# Working with remote repositories
+
+Repository updates:
+*Push* - someone with write permission
+*pull requests* - someone without write permission
+
+Do you accept this code?
+* Review the changes
+* Test the changes
+
+
+---
+
+# Automated testing
+
+GitHub Actions can be used to automatically run tests on your code when you push changes to *GitHub*.
+
+* Pull requests
+* Commits to main branch
+* Scheduled tests
+
+---
+
+# GitHub Actions
+
+GitHub Actions is a CI/CD platform that allows you to automate your build, test, and deployment pipeline.
+
+
+Terminology:
+
+  - Workflows
+  - Actions
+  - Triggers
+  - Runners
+  - Jobs
+
+---
+
+# GitHub Actions
+
+
+[Workflow](https://docs.github.com/en/actions/get-started/understand-github-actions#workflows):
+* configurable automated process that will run _something_ when triggered by an event
+* defined in a YAML file in the .github/workflows/ directory of your repository
+
+[Action](https://docs.github.com/en/actions/get-started/understand-github-actions#actions)
+* A pre-defined, reusable set of jobs or code that performs specific tasks within a workflow, reducing the amount of repetitive code you write in your workflow files
+
+---
+
+[Trigger](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows):  When do you want the workflow to run?
+* on a schedule
+* on a push to a branch
+* on a *pull request*
+
+[Runners](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners):
+* Where do you want the action to run?
+* GitHub-hosted runners
+* Self-hosted runners :danger: security implications of other people's code running on your machine
+
+
+---
+
+[Jobs](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-jobs):
+* A set of steps to be executed on the same runner
+* _Matrix_ run the same job multiple times, each with a different combination of variables( e.g. python version, OS, compiler)
+
+
+---
+
+# GitHub Actions
+
+Things to think about:
+
+- Testing - how do test an action?
+- Containers - for dependencies
+- Security considerations
+- What do you want to automate?
+  * tests
+  * documentation builds
+  * deployments
+
+---
+
+# Utilities
+
+
+Linters: [black](https://black.readthedocs.io/en/stable/) for Python
+
+Code coverage: [codecov.io](https://about.codecov.io/)
+
+Documentation builds: [readthedocs.io](https://readthedocs.org/), [GitHub Pages](https://docs.github.com/en/pages)
+
+
+Many more!
+
+---
+
 # Working with remote repositories
 
 Stash is a way to save your local uncommitted changes without committing them.  You can then apply these changes later.
@@ -795,37 +956,13 @@ Would rebase be better for your workflow?
 
 </div>
 
----
-
-
-![bg contain](pull-request.svg)
 
 ---
 
-![bg contain](Contributors.svg)
-
----
-
-# Open source 
-
-Get involved!
-
-- Issue creators
-- Code reviewers
-- Pull request authors
-- Star gazers
-
----
-
-![bg contain](dart-pulls.png)
-
-
-<!-- footer: https://ossinsight.io/analyze/NCAR/DART#people -->
----
 <!-- footer: Exercise 3 -->
 # Exercise 3: Make a pull request
 
-Fork the [CROCODILE-CESM/git-lecture-2025](https://github.com/CROCODILE-CESM/git-lecture-2025) repository on GitHub.
+Fork the [ncar-presentations/git-lecture-2025](https://ncar-presentations.github.io/git-lecture-2025/) repository on GitHub.
 
 Clone your forked repository to your machine.
 
@@ -863,7 +1000,7 @@ Take a look at the changes you have made with
 
 ---
 
-Submit a pull request to the [CROCODILE-CESM/git-lecture-2025](https://github.com/CROCODILE-CESM/git-lecture-2025).
+Submit a pull request to the [https://github.com/ncar-presentations/git-lecture-2025](https://ncar-presentations.github.io/git-lecture-2025/).
 
 <div class="task" markdown="1">
 
@@ -901,6 +1038,7 @@ Once you are comfortable with git and *tracking changes* through time, you may w
 
 - Use branches to work on new features
 - Use tags to identify versions of your code
+- Automate testing of your code with GitHub Actions
 - Make DOIs for your code on GitHub for your published papers
 - Think about what license you should choose for your code
 - Submit *pull requests* to contribute to other projects
@@ -930,10 +1068,8 @@ GitHub has a guide to [GitHub flow](https://docs.github.com/en/get-started/quick
 
 ---
 
-
 # Have Questions? Need Help?
 
 hkershaw@ucar.edu
-Crocodile slack
 
 ---
