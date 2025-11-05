@@ -15,7 +15,7 @@ cat lecture.md participants.md > full.md; npx @marp-team/marp-cli@latest full.md
 # Git & GitHub
 
 
-### Version control and collaborative workflows
+### Version control, collaborative workflows, automation with GitHub Actions
 
 <!-- This is a speaker note for the first page -->
 
@@ -636,10 +636,10 @@ Create a branch
 
 `git checkout -b my-branch`
 
+Having different branches allows you to work on **new features** without affecting the main branch until you are ready to merge your changes back into main.
+
 <div data-marpit-fragment markdown markdown="1">
 Black is main, <span style="color: red;">Red is my-branch.</span>
-
-Having different branches allows you to work on **new features** without affecting the main branch until you are ready to merge your changes back into main.
 
 </div>
    </div>
@@ -743,6 +743,23 @@ Do you accept this code?
 * Review the changes
 * Test the changes
 
+<div class="note" data-marpit-fragment markdown="1">
+Welcome contributions, Protect your code
+</div>
+
+---
+
+# Branch protection rules
+
+- Set branch protection rules on GitHub to _enforce_ certain workflows before changes can be merged into a branch.
+
+* status checks (e.g. tests must pass)
+* require reviewers to approve
+* restrict who can push to the branch
+
+<div class="note" data-marpit-fragment markdown="1">
+Status checks -> Automated testing
+</div>
 
 ---
 
@@ -779,7 +796,8 @@ Terminology:
 * defined in a YAML file in the .github/workflows/ directory of your repository
 
 [Action](https://docs.github.com/en/actions/get-started/understand-github-actions#actions)
-* A pre-defined, reusable set of jobs or code that performs specific tasks within a workflow, reducing the amount of repetitive code you write in your workflow files
+* A pre-defined, reusable set of jobs or code that performs specific tasks within a workflow
+* Reduces the amount of repetitive code you write in your workflow files
 
 ---
 
@@ -791,7 +809,7 @@ Terminology:
 [Runners](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners):
 * Where do you want the action to run?
 * GitHub-hosted runners
-* Self-hosted runners :danger: security implications of other people's code running on your machine
+* Self-hosted runners ⚠️ **Danger!** Security implications when running other people's code on your machine
 
 
 ---
@@ -801,19 +819,36 @@ Terminology:
 * _Matrix_ run the same job multiple times, each with a different combination of variables( e.g. python version, OS, compiler)
 
 
+<div class="note" data-marpit-fragment markdown="1">
+
+Matrix and dependency example [yaml](https://github.com/NCAR/DART/blob/main/.github/workflows/run_all_quickbuilds.yml)
+
+</div>
+
 ---
 
 # GitHub Actions
 
 Things to think about:
 
-- Testing - how do test an action?
-- Containers - for dependencies
-- Security considerations
-- What do you want to automate?
+* Testing - how do test an action?
+* Containers - for dependencies
+* Security considerations - what problems can you find in the [workflow](https://github.com/ncar-presentations/git-lecture-2025/blob/main/.github/workflows/pages.yml) for this repo?
+* Branch protection rules
+* What do you want to automate?
   * tests
   * documentation builds
   * deployments
+
+---
+
+# Pytest in GitHub Actions
+
+Simple example:
+pyDARTdiags pytest + coverage in GitHub Actions: [yaml](https://github.com/NCAR/pyDARTdiags/blob/main/.github/workflows/code-cov.yml)
+
+Not so simple example:
+Xarray CI [yaml](https://github.com/pydata/xarray/blob/main/.github/workflows/ci.yaml)
 
 ---
 
@@ -828,6 +863,12 @@ Documentation builds: [readthedocs.io](https://readthedocs.org/), [GitHub Pages]
 
 
 Many more!
+
+---
+
+# Working with remote repositories (other people's code)
+
+### Dealing with Divergence and Conflicts in Git
 
 ---
 
@@ -1038,7 +1079,7 @@ Once you are comfortable with git and *tracking changes* through time, you may w
 
 - Use branches to work on new features
 - Use tags to identify versions of your code
-- Automate testing of your code with GitHub Actions
+- **Automate testing of your code with GitHub Actions**
 - Make DOIs for your code on GitHub for your published papers
 - Think about what license you should choose for your code
 - Submit *pull requests* to contribute to other projects

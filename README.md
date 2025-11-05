@@ -17,12 +17,12 @@ Tutorial: Rigor and Reasoning in Research Software
 - [Think about the workflow you want to use](https://ncar-presentations.github.io/git-lecture-2025/#70)
 
 
-
 ## Git Resources
 
 - [Git cheat sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 - [Atlassian Git tutorials](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
   Note uses Bitbucket rather than GitHub, but the Git commands are the same.
+- [dang it git](https://dangitgit.com/en/)
 
 ## Collaborative code resources
 

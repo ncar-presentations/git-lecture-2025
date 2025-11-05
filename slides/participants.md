@@ -1,5 +1,5 @@
 ---
-<!-- footer: https://github.com/CROCODILE-CESM/git-lecture-2025 -->
+<!-- footer: https://github.com/ncar-presentations/git-lecture-2025 -->
 # Thanks to the participants
 
 
