@@ -8,13 +8,13 @@ Tutorial: Rigor and Reasoning in Research Software
 - [View online (GitHub Pages)](https://ncar-presentations.github.io/git-lecture-2025/)
 
 ### Exercises
-- [Exercise 1: create a repository](https://ncar-presentations.github.io/git-lecture-2025/#24)
-- [Exercise 2: Clone a repository from GitHub](https://ncar-presentations.github.io/git-lecture-2025/#47)
-- [Exercise 3: Make a pull request](https://ncar-presentations.github.io/git-lecture-2025/#66)
+- [Exercise 1: create a repository](https://ncar-presentations.github.io/git-lecture-2025/#25)
+- [Exercise 2: Clone a repository from GitHub](https://ncar-presentations.github.io/git-lecture-2025/#48)
+- [Exercise 3: Make a pull request](https://ncar-presentations.github.io/git-lecture-2025/#81)
 
 ## Homework
-- [Putting your repository on Github](https://ncar-presentations.github.io/git-lecture-2025/#69)
-- [Think about the workflow you want to use](https://ncar-presentations.github.io/git-lecture-2025/#70)
+- [Putting your repository on Github](https://ncar-presentations.github.io/git-lecture-2025/#84)
+- [Think about the workflow you want to use](https://ncar-presentations.github.io/git-lecture-2025/#86)
 
 
 ## Git Resources

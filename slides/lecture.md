@@ -628,6 +628,7 @@ What is the difference between a **commit** and a _branch_?
 </div>
 
 ---
+<!-- footer: "" -->
 
 <div class="box-container">
    <div class="box-no-border" style="width: 60%;" markdown="1">
@@ -1096,6 +1097,7 @@ Think about how you want to use git and GitHub in your own work.  Here are some 
 * How many people work on your code?
 * Is issue tracking useful for you?
 * Do you want to use branches for new features? Or just work on the main branch?
+* Do you want to use automated testing with GitHub Actions?
 * Do you want to use pull requests for code review?
 * What would you put in a contributors guide?
 
