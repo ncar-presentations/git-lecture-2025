@@ -851,6 +851,12 @@ pyDARTdiags pytest + coverage in GitHub Actions: [yaml](https://github.com/NCAR/
 Not so simple example:
 Xarray CI [yaml](https://github.com/pydata/xarray/blob/main/.github/workflows/ci.yaml)
 
+<div  data-marpit-fragment markdown="1">
+
+ Lets set one up! [little-repo](https://github.com/hkershaw-brown/little-repo)
+
+</div>
+
 ---
 
 # Utilities
