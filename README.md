@@ -24,6 +24,13 @@ Tutorial: Rigor and Reasoning in Research Software
   Note uses Bitbucket rather than GitHub, but the Git commands are the same.
 - [dang it git](https://dangitgit.com/en/)
 
+## GitHub Actions Resources
+
+- [Quickstart: GitHub Actions](https://docs.github.com/en/actions/get-started/quickstart)
+- [CI Starter workflows](https://github.com/actions/starter-workflows/tree/main/ci)
+- [CI Python Guide](https://docs.github.com/en/actions/tutorials/build-and-test-code/python)
+
+
 ## Collaborative code resources
 
 - [code-review.org](https://code-review.org/)
